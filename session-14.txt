@@ -21,6 +21,8 @@ symlink == shortlink == softlink
 command: ln -s orginal alter
 	 ln -s app app1 
 	 ls -li
+	 find / -inum <number> (entire system hardlink)
+	 find /home -xdev -inum <number> (only true hard link if you a give path)
 
 YUM -> Before RHEL-8 YUM is the package manager
 RHEL-8 DNF is the package manager
