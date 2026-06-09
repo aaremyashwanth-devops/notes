@@ -45,6 +45,7 @@ else{
 
 variables
 data types
+Arrays
 conditions
 functions
 loops
@@ -129,6 +130,9 @@ string
 everything is string in shell
 
 position/index in coding starts from 0
+FRUITS=("APPLE","orange","guva")
+echo "fruits to sold here ${FRUITS[@]}"
+echo "fruits to sold here ${FRUITS[0]}"
 
 conditions
 ==========
