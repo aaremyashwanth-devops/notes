@@ -41,7 +41,8 @@ sed editor -> streamline editor
 
 insert text after line 1
 
-sed '1a Hi' users -> add the text after line 1, temporary edit only on screen. for perm use -i option
+sed '1a Hi' users -> add the text after line 1, temporary edit only on screen. 
+for permanent use -i option ex: sed -i '1a hi'(a:after 1 line)
 
 sed '1i Hello' users -> before line 1
 sed '/sbin/d' -> deletes all the lines with text matching sbin/d
@@ -52,6 +53,8 @@ sed '2s/sbin/SBIN/g' users -> replace sbin with SBIN in 2nd line all occurences
 sed 's/sbin/SBIN/g' -> all lines all occurences
 
 idempotency -> if you run the script any number of times, it should give the same result
-
+ remove the content in /app ex:rm -rf app/*
+ pwd store in variable      ex:actual(SCRIPT_DIR)=$pwd
+ check database presnt or not? --quit --eval 
 
 
