@@ -1,3 +1,9 @@
+If you get an error in a project, means you need to check the 3 things. 
+    1. is a security group ok
+    2. is Backend connect To the database. 
+    3. is data is loaded into the database or not
+    4. dns
+
 delete old logs
 backup
 disk utilisation and trigger email
