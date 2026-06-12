@@ -3,7 +3,9 @@ If you get an error in a project, means you need to check the 3 things.
     2. is Backend connect To the database. 
     3. is data is loaded into the database or not
     4. dns
-
+I want to delete the old log files automatically, At midnight.
+     So I need to write the Script(want that script) that will run automatically.
+     Delete the old log files >>>see in next session 20
 delete old logs
 backup
 disk utilisation and trigger email
