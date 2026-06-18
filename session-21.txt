@@ -52,6 +52,8 @@ If you need to connect any server, We must follow Below steps:
 		172.31.26.110, -e
 		ansible_user=ec2-user -e
 		ansible_password=DevOps321 -b-m dnf -a "name=nginx state=installed"
+	systemctl enable nginx
+	systemctl start nginx
 
 -m module, -e extra, -b become root,
 
