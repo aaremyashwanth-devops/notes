@@ -8,6 +8,11 @@ Disadvantages
 4. Large scale servers handling is tough
 5. Distribution specific, homogenous
 
+connect one-server to another server
+======================================
+	ssh ec2-user@ip address touch shell.txt and give password (connect server)
+	scp mongo.repo mongodb.sh ec2-user@172.31.26.110:/tmp (copy files)
+	ssh ec2-user@ip_address 'cd/tmp && sudo sh mongodb.sh' (execute file)
 1. copy mongo repo, mongodb.sh
 2. execute them
 
