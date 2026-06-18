@@ -37,11 +37,23 @@ HYD -> Delhi
 1. Person in Delhi go to DTDC office everyday and check for letter
 2. Person stays home, DTDC delivers letter whenever it arrive
 
-protocol
-port
-username
-password
-IP
+-------------------------------------
+sudo dnf install ansible -y
+If you need to connect any server, We must follow Below steps:
+	protocol(ssh)
+	port	(8080)
+	username
+	password
+	IP
+-------------------------------------
+** connect to the remote server **
+	ansible all -i 172.31.26.110,-e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+	[ec2-user@ip-172-31-27-151~]$ ansible all -i
+		172.31.26.110, -e
+		ansible_user=ec2-user -e
+		ansible_password=DevOps321 -b-m dnf -a "name=nginx state=installed"
+
+-m module, -e extra, -b become root,
 
 Linux commands == Ansible modules/collections
 
