@@ -5,3 +5,68 @@ what are the servers ansible can connect to
 ansible is in python
 
 we give inputs in playbook, ansible runs inside python connect to the systems using API
+ 
+**Ansible Inventory creation**
+====================================
+[web]
+ip@ip_address
+
+[local]
+localhost
+
+**Ansible playbook creation** 01-playbook.yaml
+====================================
+- name: hello
+  host:web
+  task:
+    - name: printing hello
+      ansible.builtin.debug:(this is module to print value|message)
+      mes:"this is how to write playbook"
+
+**Ansible Playbook.yaml Execution**
+====================================
+
+ec2-user@ip-172-31-68-24 ~/ansible ]$ ansible-playbook -i
+inventory.ini -e
+ansible_user=ec2-user -e
+ansible_password=DevOps32
+01-playbook.yaml
+
+*At the special case like "local" in Inventory file, we don't need to give the user and password. 
+
+
+** Instal nginx in server Through playbook**
+===============================================
+- name: install and run nginx
+    hosts: web
+    become: yes (giving the sudo access to install )
+    tasks:
+    - name: install nginx
+        ansible.builtin.package:(module convert into DNF At the time of Gathering facts)
+            name: nginx
+            state: present
+
+
+Variables in ansible
+  play level variables 
+  Task level variables
+  Global level variables. 
+  dynamic variable
+  inventory variable
+    [local:vars]
+    course:"this is course form inventory"
+  declare the variable
+  1.  vars:
+      course:"devops"
+      trainer:"shiva"
+  2.vars_promt:(dynamic variable)
+    - name:user
+      promt:enter user name
+      private:false
+
+   to access the variable play and task{{course}}
+   to access the global give filename ex:course.yaml
+   to access the inventory variable Remove play&task vars , Direct access{{course}}
+
+
+
