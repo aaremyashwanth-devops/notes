@@ -1,6 +1,9 @@
 Crontab
 ========
 scheduler in linux server, we can schedule the scripts to run periodically
+    crontab -e (editor)
+    crontab -l (list cron activites)
+    sudo tail -f /var/log/cron (check cron running are not? -f means display result on screen)
 
 cp source_dir dest_dir
 backup source_dir dest_dir 20
